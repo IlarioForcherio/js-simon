@@ -29,6 +29,17 @@
 
 
 
+//prova di time
+
+// let prova = setTimeout(displayNone,2000);
+
+//  function displayNone(){
+//     array.classList.add("display-none");
+// }
+
+
+
+
 
 // Descrizione:
 // Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 30 secondi.
@@ -43,11 +54,72 @@
 //fai partire un timer di 30 secondi 
 //chiedi all'utente di inserire 5 numeri(con un ciclo) di quelli che si ricorda 
 //questi numeri verranno pushati in un array
-//vedere se i numeri inseriti dall'utente sono preseti nell'array niziale se si incrementare di uno un counter punteggio 
+//vedere se i numeri inseriti dall'utente sono preseti nell'array 
+//( "includes()")niziale se si ,incrementare di uno un counter punteggio 
 //i numeri giusti finiscono in un array 
 
-//numeri
-let randomNumber = [];
+
+//variabili globali:
+
+//numeri casuali
+let arrayNumber = [];
+// numeri utente
+let numeriUtente = [];
+//richiamo id dell'h2 di html
+
+const numbersHtml = document.getElementById('numbers');
+
+
+
+
+
+//funzione numeri casuali
+
+function randomNumber(min, max) {
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+
+}
+
+
+
+//ciclo che crea 5 numeri casuali
+for(let i=0; i<5 ; i++){
+    //la variabile numeroCasuale deve stare dentro al ciclo perchè sennò genererebbe un solo numero random che verrà pushato 5 volte nell'array.
+    
+    let numeroCasuale = randomNumber(0, 100);
+   
+    arrayNumber.push(numeroCasuale);
+    //chiedere +=
+    numbersHtml.innerHTML +=`  ${arrayNumber[i]}` ; 
+}
+
+
+
+//funzione temporizzazione
+let prova = setTimeout(displayNone, 2000);
+
+
+function displayNone() {
+    arrayNumber.classList.add("display-none");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
