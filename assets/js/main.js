@@ -63,6 +63,7 @@
 
 //numeri casuali
 let arrayNumber = [];
+
 // numeri utente
 let numeriUtente = [];
 //richiamo id dell'h2 di html
@@ -97,12 +98,30 @@ for(let i=0; i<5 ; i++){
 
 
 //funzione temporizzazione
-let prova = setTimeout(displayNone, 2000);
+let prova = setTimeout(displayNone, 1000);
 
 
 function displayNone() {
-    arrayNumber.classList.add("display-none");
+  // arrayNumber.classList.add('blue');
+  numbersHtml.innerHTML = "";
+    
 }
+
+
+
+//ciclo di prompt da pushare in un array
+
+for (k=0 ; k<5 ; k++){
+let inserisci = parseInt(prompt('inserisci 5 un numeri:'));
+numeriUtente.push(inserisci);
+
+
+}
+numbersHtml.innerHTML += `i tuoi numeri sono ${numeriUtente}`;
+console.log( numeriUtente);
+
+
+
 
 
 
