@@ -79,7 +79,8 @@ const playGameBtn = document.getElementById('btn-html');
 
 //richiamo id dell'h2 di html
 const numbersHtml = document.getElementById('numbers');
-
+//richiamo id dell'h1 di html
+const textHtml = document.getElementById('text');
 
 //bottone play
 
@@ -119,7 +120,7 @@ let displayNumeri = setTimeout(displayNone, 2000);
 
 function displayNone() {
     numbersHtml.classList.add("display-none");
-  
+    
   
 }
 console.log(arrayNumber); 
@@ -133,7 +134,7 @@ function addUserNumber(){
  //ciclo di prompt da pushare in un array
 
  for (k=0 ; k<5 ; k++){
-    let inserisci = parseInt(prompt('inserisci 5  numeri:'));
+    let inserisci = parseInt(prompt('inserisci i numeri che hai visto:'));
     numeriUtente.push(inserisci);
     //controllo tra i due array (includes)
     if(arrayNumber.includes(numeriUtente[k]) ){
