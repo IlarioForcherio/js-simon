@@ -69,16 +69,25 @@ let arrayNumber = [];
 let numeriUtente = [];
 
 //variabile soldatino
-
 let check = true;
 
+//counter
+let counter = 0;
+
+//richiamo il container
+const playGameBtn = document.getElementById('btn-html');
 
 //richiamo id dell'h2 di html
 const numbersHtml = document.getElementById('numbers');
 
 
+//bottone play
+
+playGameBtn.addEventListener("click", playGame );
 
 
+//funzione playgame
+function playGame(){
 
 //funzione numeri casuali
 
@@ -101,36 +110,47 @@ for(let i=0; i<5 ; i++){
     numbersHtml.innerHTML +=`  ${arrayNumber[i]}` ;
    
 }
-console.log(arrayNumber)
-
 
 
 
 //funzione temporizzazione
-let displayNumeri = setTimeout(displayNone, 1000);
+let displayNumeri = setTimeout(displayNone, 2000);
 
 
 function displayNone() {
-   //arrayNumber.classList.add("blue");
- numbersHtml.innerHTML = "";
+    numbersHtml.classList.add("display-none");
   
-
+  
 }
+console.log(arrayNumber); 
 
-let userNumber = setTimeout(addUserNumber, 2000);
+//funzione temporizzazione del ciclo 
+
+let userNumber = setTimeout(addUserNumber, 4000);
+
 function addUserNumber(){
   
  //ciclo di prompt da pushare in un array
 
  for (k=0 ; k<5 ; k++){
-    let inserisci = parseInt(prompt('inserisci 5 un numeri:'));
+    let inserisci = parseInt(prompt('inserisci 5  numeri:'));
     numeriUtente.push(inserisci);
-    
-    
+    //controllo tra i due array (includes)
+    if(arrayNumber.includes(numeriUtente[k]) ){
+        counter++
+         
+       }
+   
     }
-    numbersHtml.innerHTML += `i tuoi numeri sono ${numeriUtente}`;
+    
     console.log( numeriUtente);
+    console.log(`hai ricordato:${counter} numeri`);
+    numbersHtml.innerHTML += `ciao`;
+
   
+}
+ 
+
 }
 
 
@@ -138,15 +158,9 @@ function addUserNumber(){
 
 
 
-//controllo tra i due array (includes)
 
 
 
-// if(arrayNumber.includes(numeriUtente) ){
-//     console.log('ciao')
-// }else{
-//     console.log('nociao')
-// }
 
 
 

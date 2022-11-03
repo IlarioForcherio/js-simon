@@ -6,20 +6,31 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: black;
+}
+
+.cnt{
+  flex-direction: column;
+
+}
+
+button{
+
+  font-size: 50px;
+  padding:20px 10px;
+  color: white;
+  background-color: #0b0b0b;
+  border: 5px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
+  
+}
+
 .display-none{
   display:none;
 }
 
 
-.mystyle {
-  width: 100%;
-  padding: 25px;
-  background-color: coral;
-  color: white;
-  font-size: 25px;
-}
 
-.blue{
-  color: blue;
-}
 
