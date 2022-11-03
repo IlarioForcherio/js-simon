@@ -63,7 +63,7 @@
 
 //numeri casuali
 let arrayNumber = [];
-console.log(arrayNumber)
+
 
 // numeri utente
 let numeriUtente = [];
@@ -107,17 +107,22 @@ console.log(arrayNumber)
 
 
 //funzione temporizzazione
-let prova = setTimeout(displayNone, 1000);
+let displayNumeri = setTimeout(displayNone, 1000);
 
 
 function displayNone() {
-    arrayNumber.classList.add("blue");
- //numbersHtml.innerHTML = "";
+   //arrayNumber.classList.add("blue");
+ numbersHtml.innerHTML = "";
   
 
+}
+
+let userNumber = setTimeout(addUserNumber, 2000);
+function addUserNumber(){
+  
  //ciclo di prompt da pushare in un array
 
-for (k=0 ; k<5 ; k++){
+ for (k=0 ; k<5 ; k++){
     let inserisci = parseInt(prompt('inserisci 5 un numeri:'));
     numeriUtente.push(inserisci);
     
@@ -125,12 +130,9 @@ for (k=0 ; k<5 ; k++){
     }
     numbersHtml.innerHTML += `i tuoi numeri sono ${numeriUtente}`;
     console.log( numeriUtente);
- 
-
-
-
-
+  
 }
+
 
 
 
