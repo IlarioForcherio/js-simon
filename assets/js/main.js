@@ -63,11 +63,17 @@
 
 //numeri casuali
 let arrayNumber = [];
+console.log(arrayNumber)
 
 // numeri utente
 let numeriUtente = [];
-//richiamo id dell'h2 di html
 
+//variabile soldatino
+
+let check = true;
+
+
+//richiamo id dell'h2 di html
 const numbersHtml = document.getElementById('numbers');
 
 
@@ -92,8 +98,11 @@ for(let i=0; i<5 ; i++){
    
     arrayNumber.push(numeroCasuale);
     //chiedere +=
-    numbersHtml.innerHTML +=`  ${arrayNumber[i]}` ; 
+    numbersHtml.innerHTML +=`  ${arrayNumber[i]}` ;
+   
 }
+console.log(arrayNumber)
+
 
 
 
@@ -102,26 +111,40 @@ let prova = setTimeout(displayNone, 1000);
 
 
 function displayNone() {
-  // arrayNumber.classList.add('blue');
-  numbersHtml.innerHTML = "";
-    
-}
+    arrayNumber.classList.add("blue");
+ //numbersHtml.innerHTML = "";
+  
 
-
-
-//ciclo di prompt da pushare in un array
+ //ciclo di prompt da pushare in un array
 
 for (k=0 ; k<5 ; k++){
-let inserisci = parseInt(prompt('inserisci 5 un numeri:'));
-numeriUtente.push(inserisci);
+    let inserisci = parseInt(prompt('inserisci 5 un numeri:'));
+    numeriUtente.push(inserisci);
+    
+    
+    }
+    numbersHtml.innerHTML += `i tuoi numeri sono ${numeriUtente}`;
+    console.log( numeriUtente);
+ 
+
+
 
 
 }
-numbersHtml.innerHTML += `i tuoi numeri sono ${numeriUtente}`;
-console.log( numeriUtente);
 
 
 
+
+
+//controllo tra i due array (includes)
+
+
+
+// if(arrayNumber.includes(numeriUtente) ){
+//     console.log('ciao')
+// }else{
+//     console.log('nociao')
+// }
 
 
 
